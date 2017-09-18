@@ -159,17 +159,14 @@ function moveDodger(e) {
      if(e.which === RIGHT_ARROW){
        moveDodgerRight();
      }
-     if(e.which === LEFT_ARROW){
+     if(e.which === LEFT_ARROW && e.preventDefault){
+       e.preventDefault();
        moveDodgerLeft();
      }
    });
 }
 
 function moveDodgerLeft() {
-  if(e.stopPropagation){
-    e.stopPropagation();
-  }
-  //e.preventDefault();
   // implement me!
   /**
    * This function should move DODGER to the left
