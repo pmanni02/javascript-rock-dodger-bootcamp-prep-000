@@ -199,7 +199,7 @@ function moveDodgerRight() {
    function step(){
      //DODGER.style.left = `${DODGER.style.left += 4}px`;
      DODGER.style.left = `${dodgerRightEdge + 4}px`;
-     if(dodgerRightEdge < 400){
+     if(dodgerLeftEdge <= 360){
        window.requestAnimationFrame(step);
      }
    }
