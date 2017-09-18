@@ -161,7 +161,6 @@ function moveDodger(e) {
      }
      if(e.which === LEFT_ARROW){
        moveDodgerLeft();
-       //return e.preventDefault();
      }
    });
 }
