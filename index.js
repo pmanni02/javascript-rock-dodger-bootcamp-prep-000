@@ -160,8 +160,9 @@ function moveDodger(e) {
        moveDodgerRight();
      }
      if(e.which === LEFT_ARROW){
-       e.preventDefault();
+       
        moveDodgerLeft();
+       e.preventDefault();
      }
    });
 }
