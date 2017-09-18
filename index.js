@@ -186,7 +186,6 @@ function moveDodgerLeft() {
          window.requestAnimationFrame(step);
        }
      }
-
    window.requestAnimationFrame(step);
  }
 }
@@ -199,13 +198,18 @@ function moveDodgerRight() {
    */
    var left = positionToInteger(DODGER.style.left);
 
-   function step(){
-     DODGER.style.left = `${left += 4}px`;
-     if(left < 360){
-       window.requestAnimationFrame(step);
-     }
+   if(left === 360){
+     DODGER.style.left = 360;
    }
-   window.requestAnimationFrame(step);
+   else{
+     function step(){
+       DODGER.style.left = `${left += 4}px`;
+       if(left < 360){
+         window.requestAnimationFrame(step);
+       }
+     }
+     window.requestAnimationFrame(step);
+   }
 }
 
 // /**
