@@ -164,7 +164,7 @@ function moveDodger(e) {
       //  e.stopPropagation();
        moveDodgerLeft();
      }
-   }, true);
+   });
 }
 
 function moveDodgerLeft() {
